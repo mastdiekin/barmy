@@ -1,0 +1,36 @@
+$output-bourbon-deprecation-warnings: false
+@import bourbon
+@import src/_fonts
+@import src/_func
+@import vars
+@import animations
+@import lib/slick
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+html, body
+	height: 100%
+
+body
+	height: 100%
+	margin: 0
+	padding: 0
+	background: $bg
+	color: $w
+	+mon
+	font-size: 14px
+
+@import src/_preloader

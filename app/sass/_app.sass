@@ -1,0 +1,385 @@
+a
+	text-decoration: none
+	color: $w
+	&:hover,
+	&:focus
+		outline: none
+		color: $main
+
+div
+	outline: none
+
+img
+	max-width: 100%
+
+ul
+	padding: 0
+	margin: 0
+
+.btn
+	display: block
+	background-image: url('../images/btn-bg.png')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	display: inline-block
+	text-align: center
+	width: 247px
+	height: 53px
+	line-height: 43px
+	margin: 0 auto
+	+out
+	font-size: 18px
+	text-transform: uppercase
+	color: $b !important
+	&.btn__red
+		color: #ff4e3e !important
+	&:hover
+		color: $main !important
+
+.wrapper
+	+pr
+
+.brush
+	&__left,
+	&__right
+		+pa
+		bottom: 0
+		width: 1000px
+		height: 100%
+		z-index: 1
+		background-size: cover
+		+r(2000)
+			width: 500px
+		+r(1400)
+			width: 200px
+		+r(400)
+			display: none
+	&__left
+		left: 0
+		background: url('../images/brush-left.png') repeat-y
+		background-position: 0 0
+		+r(1400)
+			background-position: 38% 0
+	&__right
+		background: url('../images/brush-right.png') repeat-y
+		right: 0
+		+r(1400)
+			background-position: 100% 0
+
+section,
+footer
+	+pr
+	z-index: 2
+
+.hero
+	height: 100vh
+	min-height: 730px
+	// background-image: url('../images/hero.jpg')
+	// background-size: cover
+	// background-repeat: no-repeat
+	// background-position: 50% 50%
+	text-align: center
+	+pr
+	+r(600)
+		overflow: hidden
+	&:before
+		+c
+		+pa
+		bottom: 0
+		left: 0
+		right: 0
+		height: 200px
+		background-image: url('../images/hero-fade.png')
+		background-repeat: repeat-x
+		background-position: 50% 0
+		z-index: 2
+	>
+		.container
+			height: 100%
+			+pr
+			z-index: 2
+			+r(969)
+				z-index: 999
+			>
+				.row
+					height: 100%
+	&__bg
+		+pa
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-image: url('../images/hero.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: 50% 50%
+	&__menu
+		+df
+		+cc
+		margin-bottom: 100px
+		opacity: 1
+		visibility: visible
+		transition: opacity $t, visibility $t
+		li
+			display: inline-block
+			margin-left: 55px
+			&:first-child
+				margin-left: 0
+			a
+				display: block
+				font-size: 24px
+				+out
+				text-transform: uppercase
+				+pr
+				&:before
+					+c
+					+pa
+					z-index: 1
+					background-image: url('../images/hover-menu.png')
+					background-repeat: no-repeat
+					background-size: 100%
+					background-position: 50% 67%
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					opacity: 0
+					visibility: hidden
+					transition: opacity .2s ease-in-out, visibility .2s ease-in-out
+				&:hover
+					color: $w
+					+r(969)
+						color: $main
+					&:before
+						opacity: 1
+						visibility: visible
+						+r(969)
+							display: none
+				&.is-active
+					color: $w
+					&:before
+						opacity: 1
+						visibility: visible
+						+r(969)
+							display: none
+		&.is-active
+			opacity: 1
+			visibility: visible
+		+r(969)
+			opacity: 0
+			visibility: hidden
+			display: block
+			padding: 20px
+			padding-right: 40px
+			background: rgba($b, .9)
+			position: fixed
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			margin-bottom: 0
+			text-align: left
+			li
+				display: block
+				margin: 0
+	&__logo
+		+r(1100)
+			img
+				width: 100%
+		&-info
+			display: block
+			margin-top: 32px
+			margin-bottom: 100px
+	&__info
+		+r(1000)
+			display: block !important
+
+.btn__mobile
+	width: 40px
+	height: 40px
+	background: transparent
+	+pf
+	right: 15px
+	top: 15px
+	border: 0
+	outline: none
+	display: none
+	cursor: pointer
+	z-index: 1000
+	+r(969)
+		display: block
+	span
+		display: block
+		height: 2px
+		background: $main
+		+pa
+		width: 30px
+		transition: transform $t
+		&:nth-of-type(1)
+			top: 12px
+		&:nth-of-type(2)
+			bottom: 12px
+	&.is-active
+		span
+			&:nth-of-type(1)
+				top: 20px
+				transform: rotate(45deg)
+			&:nth-of-type(2)
+				bottom: 18px
+				transform: rotate(-45deg)
+
+.main
+	&__name
+		font-size: 24px
+		color: $main
+		+out
+		text-transform: uppercase
+		margin-bottom: 36px
+		line-height: 24px
+	&__title
+		font-size: 60px
+		color: $w
+		+out
+		text-transform: uppercase
+		margin-bottom: 65px
+		line-height: 65px
+		+r(969)
+			font-size: 40px
+			line-height: 50px
+	&__text
+		+lh(36, 14)
+		+lsPX(25, 14)
+
+.about
+	padding: 200px 0
+	background-image: url('../images/about.png')
+	background-repeat: no-repeat
+	background-position: 0 50%
+	overflow: hidden
+	+r(969)
+		padding: 100px 0
+	>
+		.container-fluid
+			height: 100%
+	&__image
+		text-align: right
+		padding-right: $about-padding
+		display: inline-block
+		float: right
+		+pr
+		+r(1192)
+			padding-right: $about-padding/2
+		+r(1147)
+			padding-right: 0
+		+r(776)
+			margin-bottom: 80px
+		img
+			&:nth-of-type(1)
+				+pa
+				left: -150px
+				top: 150px
+				+r(640)
+					top: -50px
+	&__info
+		max-width: 800px
+		min-width: 100%
+		padding-left: $about-padding
+		+r(1192)
+			padding-left: $about-padding/2
+		+r(1147)
+			padding-left: 0
+
+.slider
+	&__info
+		+pr
+		z-index: 2
+		text-align: center
+		top: 50%
+		transform: translate(0, -50%)
+	&__for
+		.item
+			height: 90vh
+			min-height: 700px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			+pr
+			&:before
+				+c
+				+pa
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				background: $b
+				opacity: .55
+	&__nav
+		margin-top: -$slider-nav-height/2
+		.item
+			height: $slider-nav-height
+			cursor: pointer
+			cursor: zoom-in
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			transition: border-color $t
+			+pr
+			box-shadow: none
+			transition: box-shadow $t
+			z-index: 2
+			&:before
+				+c
+				+pa
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				background: $b
+				opacity: .55
+				transition: opacity $t
+		.slick-current
+			.item
+				box-shadow: inset 0px 0px 0px 10px #ff443c
+				z-index: 1
+				&:before
+					opacity: 0
+		+r(969)
+			display: none
+
+.footer
+	background-image: url('../images/footer-bg.png')
+	background-size: cover
+	background-position: 50% 100%
+	background-repeat: no-repeat
+	margin-top: -$slider-nav-height/2 + -10
+	+pr
+	z-index: 1
+	padding-top: $slider-nav-height/2 + 280
+	padding-bottom: $slider-nav-height/2 + 280
+	text-align: center
+	&:before
+		+c
+		+pa
+		height: 350px
+		bottom: 0
+		left: 0
+		right: 0
+		background-repeat: repeat-x
+		background-image: url('../images/footer-fade.png')
+		background-position: 50% 0
+	&__join
+		margin-bottom: 50px
+	&__copyright
+		+pa
+		bottom: 100px
+		left: 50%
+		transform: translate(-50%, 0)
+		color: #313131
+		text-transform: uppercase
+		+outb
+		font-size: 18px
+		line-height: 33px
+		+lsPX(25, 18)
