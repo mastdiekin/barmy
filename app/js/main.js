@@ -12,7 +12,7 @@ svg4everybody({
   polyfill: true 
 });
 
-$('section, footer, .hero__logo, .hero__bg').css('opacity', 0);
+$('section, footer, .hero__bg').css('opacity', 0);
 
 
 $(window).on('load', function() {
@@ -24,7 +24,7 @@ $(window).on('load', function() {
     hideloader(); 
   })).done(function() {
 
-    $('section, footer, .hero__logo').each(function() {
+    $('section, footer').each(function() {
       var self = $(this);
       $(this).waypoint({
         handler: function() {
